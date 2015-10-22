@@ -1,0 +1,28 @@
+{
+  "name": "react-demos",
+  "version": "0.0.1",
+  "description": "some demos for react",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaosong/react-demos.git"
+  },
+  "keywords": [
+    "react-demos",
+    "react",
+    "es6",
+    "flux"
+  ],
+  "author": "liaosong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liaosong/react-demos/issues"
+  },
+  "homepage": "https://github.com/liaosong/react-demos#readme"
+}
