@@ -1,6 +1,6 @@
 ## react demos
 
-### learn by doing
+### features
 1. es6
 2. flux
 3. react
