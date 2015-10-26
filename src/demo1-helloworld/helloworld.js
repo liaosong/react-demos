@@ -1,9 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Helloworld extends React.Component {
   render() {
-    return <div>Hello world!</div>;
+    return <div>Hello world! AA</div>;
   }
 }
 

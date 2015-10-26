@@ -34,27 +34,13 @@ gulp.task('compile-js', function(){
     .pipe(gulp.dest(PATHS.dist));
 });
 
-// gulp.task('build-js', function() {
-//   return gulp.src(PATHS.js)
-//     .pipe(webpack({
-//       //output files 入口文件输出配置
-//       output: {
-//         filename: '[name].js'
-//       },
-//       module: {
-//         loaders: [
-//           {
-//             test: /\.js$/,
-//             loader: 'babel-loader'
-//           }
-//         ]
-//       }
-//     }))
-//     .pipe(gulp.dest(PATHS.dist));
-// });
-
+gulp.task('watch', function(e){
+  gulp.watch(PATHS.js, ['compile-js']);
+  gulp.watch(PATHS.html, ['copy']);
+});
 
 gulp.task('default', [
   'copy',
-  'compile-js'
+  'compile-js',
+  'watch'
 ]);
