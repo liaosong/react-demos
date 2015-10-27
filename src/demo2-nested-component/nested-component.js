@@ -22,7 +22,19 @@ class CommentList extends React.Component {
   render() {
     return (
       <div className="commentList">
-        Hello, world! I am a CommentList.
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
+    );
+  }
+}
+
+class Comment extends React.Component {
+  render() {
+    return (
+      <div className="commnet">
+        Hello, world! I am a comment.
       </div>
     );
   }
@@ -31,9 +43,11 @@ class CommentList extends React.Component {
 class CommentForm extends React.Component {
   render() {
     return (
-      <div className="commentForm">
-        Hello, world! I am a CommentForm.
-      </div>
+      <form className="commentForm">
+        <textarea placeholder="please input your  point!" name="content"></textarea>
+        <br/>
+        <button type="submit">submit</button>
+      </form>
     );
   }
 }
