@@ -12,6 +12,9 @@ var data = [
 ];
 
 class CommentBox extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   commentSubmitHandle(comment){
     if(!comment.id){
       comment.id = this.props.data.length+1;
@@ -26,7 +29,9 @@ class CommentBox extends React.Component {
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.props.data}/>
-        <CommentForm onCommentSubmit={this.commentSubmitHandle.bind(this)}/>
+        <button style={}>评论</button>
+        <CommentForm
+        onCommentSubmit={this.commentSubmitHandle.bind(this)}/>
       </div>
     );
   }
