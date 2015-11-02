@@ -14,6 +14,10 @@ var data = [
 class CommentBox extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      formShow: false
+    };
   }
   commentSubmitHandle(comment){
     if(!comment.id){
@@ -24,14 +28,26 @@ class CommentBox extends React.Component {
     this.setState({data: newData});
   }
 
+  showForm(){
+    this.setState({
+      formShow: true
+    });
+  }
+
+
+
   render() {
+    var partial;
+    if(this.state.formShow){
+      partial = <CommentForm onCommentSubmit={this.commentSubmitHandle.bind(this)}/>
+    }else{
+      partial = <button onClick={this.showForm.bind(this)}>add comment</button>
+    }
     return (
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.props.data}/>
-        <button style={}>评论</button>
-        <CommentForm
-        onCommentSubmit={this.commentSubmitHandle.bind(this)}/>
+        {partial}
       </div>
     );
   }
