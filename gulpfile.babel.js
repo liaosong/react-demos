@@ -3,6 +3,7 @@ import babel from 'gulp-babel';
 import webpack from 'webpack-stream';
 import browserify from 'gulp-browserify';
 import babelify from 'babelify';
+import uglify from 'gulp-uglify';
 
 const PATHS = {
   js: 'src/*/*.js',
@@ -31,6 +32,7 @@ gulp.task('compile-js', function(){
       extensions: ['.jsx'],
       transform: ['babelify']
     }))
+    .pipe(uglify())
     .pipe(gulp.dest(PATHS.dist));
 });
 

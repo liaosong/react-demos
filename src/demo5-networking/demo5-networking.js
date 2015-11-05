@@ -9,7 +9,6 @@ class Movie extends React.Component {
 
   render(){
     var movie = this.props.data;
-
     return (
       <div>
         <img src={movie.posters.thumbnail}/>
@@ -36,7 +35,6 @@ class MoviesList extends React.Component{
     $.get(this.props.urlData).then((res) => {
       return JSON.parse(res);
     }).then((res) => {
-      console.log(res);
       self.setState({
         movies: res.movies,
         loaded: true
@@ -62,6 +60,7 @@ class MoviesList extends React.Component{
       </div>
     );
   }
+
   render(){
     if(!this.state.loaded) return this.renderLoading();
     return this.renderList();
