@@ -10,7 +10,7 @@
 1. [Nested component](#demo2-nested-component)
 1. [Component talking to component](#demo3-component-talking-to-component)
 1. [Component state](#demo4-component-state)
-1. [Network](#demo5-network(AJAX))
+1. [Network](#demo5-network)
 
 
 ---
@@ -259,7 +259,7 @@ class CommentForm extends React.Component {
 }
 
 ```
-#### demo5-network(AJAX)
+#### demo5-network
 ```javascript
 
 import React from 'react';
